@@ -1,4 +1,4 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,8 +6,8 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-@Entity(name = "accounts")
-public class Account {
+@Entity(name = "cards")
+public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,11 +16,7 @@ public class Account {
     @Column(unique = true)
     private String number;
 
-    private String agency;
-    @Column(precision = 13, scale = 2)
-
-    private BigDecimal balance;
-    @Column(name = "additional_limit", precision = 13, scale = 2)
-
+    @Column(name = "available_limit", precision = 13, scale = 2)
     private BigDecimal limit;
+
 }

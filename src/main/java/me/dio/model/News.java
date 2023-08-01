@@ -1,4 +1,4 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,8 +7,8 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity(name = "features")
-public class Feature {
+@Entity(name = "news")
+public class News {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,5 +17,4 @@ public class Feature {
     private String icon;
 
     private String description;
-
 }
